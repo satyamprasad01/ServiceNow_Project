@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0657273483b6621085175c50ceaad3e4" label="Stock Alert" max_length="40" name="x_1799176_book_ma_stock_alert" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="triggered" label="Alert Status" max_length="40" name="alert_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Triggered" value="triggered"/>
+                <element inactive_on_update="false" label="Resolved" value="resolved"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Book" max_length="32" name="book" reference="x_1799176_book_ma_book_inventory" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Generated On" max_length="40" name="generated_on" type="glide_date_time"/>
+        <element label="Current Stock" max_length="40" name="current_stock" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="book"/>
+        </index>
+    </element>
+</database>

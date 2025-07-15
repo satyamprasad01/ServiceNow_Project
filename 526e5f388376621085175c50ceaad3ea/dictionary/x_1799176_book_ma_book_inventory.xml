@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4601ef3c8376621085175c50ceaad397" label="Book Inventory" max_length="40" name="x_1799176_book_ma_book_inventory" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Supplier" max_length="40" name="supplier" reference="x_1799176_book_ma_supplier" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Author" max_length="40" name="author" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Genre" max_length="40" name="genre" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="ISBN" max_length="40" name="isbn" type="string"/>
+        <element label="Quantity in Stock" max_length="40" name="quantity_in_stock" type="integer"/>
+        <element attributes="omit_sys_original=true" label="Price" max_length="20" name="price" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Reorder Level" max_length="40" name="reorder_level" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Title" max_length="40" name="title" type="string"/>
+    </element>
+</database>

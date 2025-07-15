@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c8056b7083b6621085175c50ceaad373" label="Purchase Order" max_length="40" name="x_1799176_book_ma_purchase_order" type="collection">
+        <element label="Quantity Ordered" max_length="40" name="quantity_ordered" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Order Date" max_length="40" name="order_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="encode_utf8=false" label="Supplier" max_length="32" name="supplier" reference="x_1799176_book_ma_supplier" type="reference"/>
+        <element attributes="encode_utf8=false" label="Book" max_length="32" name="book" reference="x_1799176_book_ma_book_inventory" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Delivery Date" max_length="40" name="delivery_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="ordered" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Ordered" value="ordered"/>
+                <element inactive_on_update="false" label="Delivered" value="delivered"/>
+                <element inactive_on_update="false" label="Cancelled" value="cancelled"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="book"/>
+        </index>
+        <index name="index2">
+            <element name="supplier"/>
+        </index>
+    </element>
+</database>

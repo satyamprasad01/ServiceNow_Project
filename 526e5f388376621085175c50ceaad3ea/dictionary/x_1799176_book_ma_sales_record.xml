@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="43a62bf083b6621085175c50ceaad39c" label="Sales Record" max_length="40" name="x_1799176_book_ma_sales_record" type="collection">
+        <element attributes="encode_utf8=false" label="Book" max_length="32" name="book" reference="x_1799176_book_ma_book_inventory" type="reference"/>
+        <element label="Quantity Sold" max_length="40" name="quantity_sold" type="integer"/>
+        <element attributes="encode_utf8=false" label="Sales Clerk" max_length="32" name="sales_clerk" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Sales Date" max_length="40" name="sales_date" type="glide_date_time"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Total Price" max_length="20" name="total_price" type="price"/>
+        <index name="index">
+            <element name="book"/>
+        </index>
+        <index name="index2">
+            <element name="sales_clerk"/>
+        </index>
+    </element>
+</database>
