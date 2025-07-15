@@ -4,7 +4,14 @@
         <array>false</array>
         <attributes>omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer</attributes>
         <audit>false</audit>
-        <calculation/>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	
+
+	return 'current.quantity_sold * current.book.price';  // return the calculated value
+
+})(current);]]></calculation>
         <choice/>
         <choice_field/>
         <choice_table/>
@@ -24,10 +31,10 @@
         <element>total_price</element>
         <element_reference>false</element_reference>
         <foreign_database/>
-        <formula/>
+        <formula>Total Price &lt; = Total Price * Quantity Sold</formula>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Price">price</internal_type>
+        <internal_type display_value="Currency">currency</internal_type>
         <mandatory>false</mandatory>
         <max_length>20</max_length>
         <name>x_1799176_book_ma_sales_record</name>
@@ -53,14 +60,14 @@
         <sys_scope display_value="Book Management System">526e5f388376621085175c50ceaad3ea</sys_scope>
         <sys_update_name>sys_dictionary_x_1799176_book_ma_sales_record_total_price</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-15 14:38:57</sys_updated_on>
+        <sys_updated_on>2025-07-15 17:25:48</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
         <use_dependent_field>false</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
+        <virtual>true</virtual>
         <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>

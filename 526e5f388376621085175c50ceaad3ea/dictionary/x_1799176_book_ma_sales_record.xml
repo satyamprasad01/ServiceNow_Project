@@ -5,7 +5,7 @@
         <element attributes="encode_utf8=false" label="Sales Clerk" max_length="32" name="sales_clerk" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Sales Date" max_length="40" name="sales_date" type="glide_date_time"/>
-        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Total Price" max_length="20" name="total_price" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;&#13;&#10;&#13;&#10;&#9;return 'current.quantity_sold * current.book.price';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" formula="Total Price &lt; = Total Price * Quantity Sold" label="Total Price" max_length="20" name="total_price" type="currency" virtual="true"/>
         <index name="index">
             <element name="book"/>
         </index>
